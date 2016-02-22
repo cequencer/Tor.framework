@@ -1,0 +1,16 @@
+language: objective-c
+osx_image: xcode7.3
+xcode_project: Tor.xcodeproj
+xcode_scheme:
+    - Tor-iOS
+    - Tor-Mac
+xcode_sdk:
+    - iphonesimulator
+    - macosx
+matrix:
+    exclude:
+        - xcode_scheme: Tor-iOS
+          xcode_sdk: macosx
+        - xcode_scheme: Tor-Mac
+          xcode_sdk: iphonesimulator
+

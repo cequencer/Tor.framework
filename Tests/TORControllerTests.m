@@ -18,6 +18,7 @@
 @implementation TORControllerTests
 
 + (TORConfiguration *)configuration {
+#if TARGET_IPHONE_SIMULATOR
     NSString *homeDirectory = nil;
     for (NSString *variable in @[@"IPHONE_SIMULATOR_HOST_HOME", @"SIMULATOR_HOST_HOME"]) {
         char *value = getenv(variable.UTF8String);
@@ -26,6 +27,9 @@
             break;
         }
     }
+#else
+    NSString *homeDirectory = NSHomeDirectory();
+#endif
     
     TORConfiguration *configuration = [TORConfiguration new];
     configuration.cookieAuthentication = @YES;

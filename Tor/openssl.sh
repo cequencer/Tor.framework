@@ -63,3 +63,5 @@ xcrun --sdk $PLATFORM_NAME lipo -create "${BUILT_PRODUCTS_DIR}/libssl."*.a -outp
 xcrun --sdk $PLATFORM_NAME lipo -create "${BUILT_PRODUCTS_DIR}/libcrypto."*.a -output "${BUILT_PRODUCTS_DIR}/libcrypto.a"
 rm "${BUILT_PRODUCTS_DIR}/libssl."*.a
 rm "${BUILT_PRODUCTS_DIR}/libcrypto."*.a
+
+exit 0

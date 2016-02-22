@@ -80,3 +80,5 @@ xcrun --sdk $PLATFORM_NAME lipo -create "${BUILT_PRODUCTS_DIR}/libevent_core."*.
 xcrun --sdk $PLATFORM_NAME lipo -create "${BUILT_PRODUCTS_DIR}/libevent_pthreads."*.a -output "${BUILT_PRODUCTS_DIR}/libevent_pthreads.a"
 xcrun --sdk $PLATFORM_NAME lipo -create "${BUILT_PRODUCTS_DIR}/libevent_extra."*.a -output "${BUILT_PRODUCTS_DIR}/libevent_extra.a"
 rm "${BUILT_PRODUCTS_DIR}/libevent"*.*.a
+
+exit 0

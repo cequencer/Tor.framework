@@ -85,3 +85,5 @@ rm "${BUILT_PRODUCTS_DIR}/libtor"*.*.a
 rm "${BUILT_PRODUCTS_DIR}/libor"*.*.a
 rm "${BUILT_PRODUCTS_DIR}/libcurve25519_donna."*.a
 rm "${BUILT_PRODUCTS_DIR}/libed25519"*.*.a
+
+exit 0
